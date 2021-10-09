@@ -1,0 +1,20 @@
+.banner-top {
+  background-color: #A2B084;
+  &__inner {
+    position: relative;
+    padding: 1.313rem 0 1.063rem 0;
+  }
+  &__logo {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: calc(50% + 3px);
+    transform: translate(0, -50%);
+  }
+  &__text {
+    font-size: 1.063rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 300;
+  }
+}

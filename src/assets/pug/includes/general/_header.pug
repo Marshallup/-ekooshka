@@ -1,1 +1,12 @@
-h1 HEADER
+include ../components/banner-top.pug
+header.header
+  .container
+    .container__header
+      .header__body
+        a(href="#").header__logo
+          img(src="./assets/img/logo-header.svg", alt="logo")
+        nav.header-menu
+          - var items = [{text: 'Продукция', link: '#'}, {text: 'Преимущества ', link: '#'}, {text: 'Заказать', link: '#'}, {text: 'Конаткты', link: '#'}];
+          each item in items
+            a(href=item.link).header-menu__link=item.text
+        .header__phone

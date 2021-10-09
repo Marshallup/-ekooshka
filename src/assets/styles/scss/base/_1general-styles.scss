@@ -8,6 +8,7 @@ body {
   position: relative;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  font-family: 'Montserrat';
 }
 img,
 picture {
@@ -26,4 +27,14 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.container {
+  max-width: 1360px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  &__header {
+    padding: 0 2.188rem;
+  }
 }

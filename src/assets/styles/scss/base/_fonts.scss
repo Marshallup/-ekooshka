@@ -1,2 +1,7 @@
 // Пример подключения
 // @include font-face("Roboto-Black", "Roboto-Black", 400, "normal", "woff");
+@include font-face("Cormorant", "Cormorant-Medium", 500, "normal", "woff2");
+@include font-face("Cormorant", "Cormorant-SemiBold", 600, "normal", "woff2");
+@include font-face("Montserrat", "Montserrat-Light", 300, "normal", "woff2");
+@include font-face("Montserrat", "Montserrat-Medium", 500, "normal", "woff2");
+@include font-face("Montserrat", "Montserrat-SemiBold", 600, "normal", "woff2");

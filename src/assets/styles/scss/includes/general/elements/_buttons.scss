@@ -1,0 +1,20 @@
+.eko {
+  &__btn {
+    padding-left: 44px;
+    display: flex;
+    align-items: center;
+    background: #E6AC4D;
+    color: white;
+    max-width: 193px;
+    height: 54px;
+    text-decoration: none;
+    &:after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url('right-arrow.svg') center center/cover no-repeat;
+      margin-left: 32px;
+    }
+  }
+}
