@@ -7,12 +7,12 @@ mainSlider.on('init', function(event, slick) {
 mainSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
   const nextSlideInc = nextSlide + 1;
   $('#count-start').text('0' + nextSlideInc);
-  console.log(event, slick, currentSlide, nextSlide)
 })
 mainSlider.slick({
+  fade: true,
   dots: true,
   infinite: true,
-  speed: 300,
+  speed: 600,
   appendArrows: '.main-slider__arrows',
   appendDots: '.main-slider__dots',
   slidesToShow: 1,

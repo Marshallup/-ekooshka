@@ -1,6 +1,6 @@
 .main-slider {
   &__container {
-    max-width: 1060px;
+    max-width: 90%;
     margin: 0 auto;
   }
   &__inner {
@@ -8,7 +8,7 @@
   }
   &__item {
     padding-top: 86px;
-    height: 514px;
+    height: 714px;
   }
   .slick {
     &-arrow {
@@ -50,6 +50,7 @@
         vertical-align: middle;
         border-radius: 20px;
         transition: all .5s ease;
+        cursor: pointer;
       }
       li.slick-active button {
         height: 100%;
@@ -68,6 +69,7 @@
     margin-right: 35px;
   }
   &__dots {
+    flex-grow: 1;
     display: flex;
     margin-right: 45px;
     flex-basis: 860px;
@@ -93,6 +95,7 @@
     margin-top: 0;
     margin-bottom: 20px;
     span {
+      font-family: 'Cormorant-italic';
       color: #A2B084;
     }
   }
