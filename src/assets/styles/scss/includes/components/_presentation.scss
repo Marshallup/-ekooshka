@@ -1,9 +1,9 @@
 .presentation {
+  background: #F9F9F9;
   &__content {
     &-wrap {
       margin-top: 153px;
       padding-bottom: 100px;
-      background: #F9F9F9;
     }
   }
   &-item {
@@ -42,6 +42,18 @@
         &-item {
           &__img {
             margin-top: -73px;
+          }
+        }
+      }
+    }
+    &--two {
+      margin: 100px 0 150px;
+      .presentation {
+        &-item {
+          &__img {
+            margin-left: 100px;
+            margin-right: 0;
+            order: 2;
           }
         }
       }

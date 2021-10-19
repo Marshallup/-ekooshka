@@ -5,9 +5,12 @@
     align-items: center;
     background: #E6AC4D;
     color: white;
-    max-width: 193px;
+    width: 193px;
     height: 54px;
     text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
     &:after {
       content: '';
       display: block;
@@ -15,6 +18,13 @@
       height: 18px;
       background: url('right-arrow.svg') center center/cover no-repeat;
       margin-left: 32px;
+    }
+    &--long {
+      width: 224px;
+      padding-left: 20px;
+      &:after {
+        margin-left: 26px;
+      }
     }
   }
 }

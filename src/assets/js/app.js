@@ -18,3 +18,23 @@ mainSlider.slick({
   slidesToShow: 1,
   adaptiveHeight: true
 });
+
+// label animations
+const inputWraps = $('.section-form-item__input-wrap');
+
+inputWraps.each((idx, item) => {
+  const $item = $(item);
+  const $input = $item.find('.section-form-item__input');
+  const $label = $item.find('.section-form-item__input-label');
+
+  $input.on('focus', function() {
+    $label.addClass('active');
+  });
+
+  $input.on('focusout', function() {
+    if (!$input.val()) {
+      $label.removeClass('active');
+    }
+  })
+
+})
