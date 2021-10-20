@@ -1,0 +1,36 @@
+section.eko__section.comparison
+  .container
+    .comparison__content
+      - var countSliders = ['','','','','',''];
+      .comparison-slider-wrap.comparison-slider-wrap__first
+        .comparison-slider
+          each item in countSliders
+            .comparison-slider-item
+              .comparison-slider-item__title Обычное <br> рафинированное масло
+              p.comparison-slider-item__desc  Наличие вредных веществ, влияющих <br> на организм человека, таких, <br> как производственный бензин, <br> нефтехимический растворитель <br> (гексан), диатомовая земля).
+        .comparison-slider-controlls
+          .comparison-slider-controlls-arrows
+          .comparison-slider-controlls-count
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__start 01
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__separator /
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__end
+      .comparison__vs VS
+      .comparison-slider-wrap.comparison-slider-wrap__last
+        .comparison-slider
+          each item in countSliders
+            .comparison-slider-item
+              .comparison-slider-item__title Натуральное масло
+                .comparison-slider-item__title-logo
+                  img(src="./assets/img/vs/logo.svg", alt="logo")
+              p.comparison-slider-item__desc  Отсутствие консервантов и других <br> вредных веществ. Только 100% <br> натуральное органическое сырье, <br> собранное в регионе Кавказских <br> Минеральных Вод.
+        .comparison-slider-controlls
+          .comparison-slider-controlls-arrows
+          .comparison-slider-controlls-count
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__start 01
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__separator /
+            .comparison-slider-controlls-count__item.comparison-slider-controlls-count__end
+
+
+
+
+
