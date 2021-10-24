@@ -2,19 +2,20 @@
   background: #F9F9F9;
   &__content {
     &-wrap {
-      margin-top: 153px;
-      padding-bottom: 100px;
+      margin-top: 9.563rem;
+      padding-bottom: 6.25rem;
     }
   }
   &-item {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     display: flex;
     align-items: center;
     &__elem {
       flex-basis: 50%;
     }
     &__img {
-      margin-right: 100px;
+      min-width: 400px;
+      margin-right: 6.25rem;
     }
     &__title {
       font-family: 'Cormorant';
@@ -47,7 +48,7 @@
       }
     }
     &--two {
-      margin: 100px 0 150px;
+      margin: 6.25rem 0 9.375rem;
       .presentation {
         &-item {
           &__img {
@@ -56,6 +57,96 @@
             order: 2;
           }
         }
+      }
+    }
+  }
+  @media screen and (max-width: $desktopWidthMedia) {
+    &-item {
+      &__title {
+        font-size: 2.238rem;
+      }
+      &__img {
+        margin-right: 3.25rem;
+      }
+      &-text {
+        &__block {
+          font-size: 1rem;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 830px) {
+    &-item {
+      display: block;
+      &__img {
+        margin: 0 auto !important;
+      }
+      &__desc {
+        text-align: center;
+      }
+      &-text {
+        &__block {
+          br {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $laptopWidthMedia) {
+    &__content {
+      &-wrap {
+        margin-top: 4.563rem;
+        padding-bottom: 0.25rem;
+      }
+    }
+    &-item {
+      &--two {
+        margin: 1.25rem 0 4.375rem;
+      }
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    &__content-wrap > .container {
+      padding: 0;
+    }
+    &-item {
+      &__desc {
+        text-align: left;
+      }
+      &__title {
+        font-size: 27px;
+      }
+      &-text {
+        overflow: hidden;
+        &__block {
+          font-size: 15px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+      &__read-more {
+        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-decoration-line: underline;
+        color: #E6AC4D;
+        cursor: pointer;
+        transition: color .5s ease;
+        &:hover {
+          color: #DA9F3C;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $mobileWidthMedia + 1) {
+    &-item {
+      &__read-more {
+        display: none;
       }
     }
   }

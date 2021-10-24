@@ -1,8 +1,10 @@
 .comparison {
   padding: 8.125rem 0 6.688rem 0;
+  max-width: 1520px;
+  margin: -100px auto 0 auto;
   background: #A2B084;
   &__content {
-    max-width: 1550px;
+    max-width: 1330px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -12,7 +14,7 @@
     &-wrap {
       max-width: 500px;
       &__first {
-        margin-right: 170px;
+        margin-right: 140px;
       }
       &__last {
         margin-left: 53.5px;
@@ -110,5 +112,68 @@
     line-height: 116.8%;
     text-align: center;
     color: #FFFFFF;
+  }
+  @media screen and (max-width: $desktopWidthMedia) {
+    margin-top: 0;
+    overflow: hidden;
+    &__content {
+      justify-content: center;
+    }
+    &-slider {
+      &-wrap {
+        &__first {
+          margin-right: 0;
+        }
+        &__last {
+          margin-left: 0;
+        }
+      }
+      &-item {
+        &__title {
+          font-size: 31px;
+          &-logo img {
+            max-width: 126px;
+          }
+        }
+        &__desc {
+          font-size: 16px;
+          line-height: 137%;
+          font-weight: 300;
+        }
+      }
+    }
+    &__vs {
+      font-size: 62px;
+    }
+  }
+  @media screen and (max-width: 834px) {
+    &__content {
+      flex-wrap: wrap;
+    }
+    &__vs {
+      font-size: 92px;
+      width: 100%;
+      margin: 60px 0;
+      position: static;
+      transform: translate(0, 0);
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    &-slider {
+      &-wrap {
+        max-width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 420px) {
+    &-slider {
+      &-item {
+        &__desc {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

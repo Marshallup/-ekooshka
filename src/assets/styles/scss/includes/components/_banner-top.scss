@@ -17,4 +17,26 @@
     color: #FFFFFF;
     font-weight: 300;
   }
+  @media screen and (max-width: $containerHeaderMedia) {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__logo {
+      min-width: 120px;
+      margin-right: 16px;
+      position: static;
+      transform: translate(0, 0);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    &__text {
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    &__logo {
+      min-width: 80px;
+    }
+  }
 }

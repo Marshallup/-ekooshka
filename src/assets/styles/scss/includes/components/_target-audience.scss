@@ -32,7 +32,7 @@
     }
   }
   &__title {
-    margin-top: 100px;
+    margin-top: 6.25rem;
     font-family: 'Cormorant';
     font-weight: 400;
     font-size: 3.25rem;
@@ -54,7 +54,7 @@
       margin-bottom: 40px;
       font-family: 'Cormorant-italic';
       font-weight: 500;
-      font-size: 25px;
+      font-size: 1.563rem;
       line-height: 105.8%;
       color: #FFFFFF;
       &:before {
@@ -69,6 +69,80 @@
         font-weight: 600;
         color: #4E5C3F;
       }
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    &__title {
+      margin-bottom: 2.25rem;
+    }
+    &-images {
+      &__item {
+        max-width: 320px;
+        &--bottom {
+          bottom: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    &-text {
+      flex-basis: 70%;
+    }
+    &-images {
+      flex-basis: 45%;
+      &__item {
+        &--bottom {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $desktopWidthMedia) {
+    &__title {
+      font-size: 2.438rem;
+      margin-bottom: 3.25rem;
+    }
+    &-images {
+      display: none;
+    }
+    &-text {
+      flex-basis: 100%;
+    }
+    &-list-wrap,
+    &__logo {
+      margin: 0 auto;
+      max-width: 700px;
+    }
+    &-list-wrap {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: $laptopWidthMedia) {
+    &__inner {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    & > .container,
+    &__body > .container {
+      padding: 0;
+    }
+    &__logo {
+      display: none;
+    }
+    &__content {
+      padding-bottom: 20px;
+    }
+    &__title {
+      margin-top: 5.25rem;
+    }
+    &-text {
+      padding: 0;
+    }
+  }
+  @media screen and (min-width: $mobileWidthMedia + 1) {
+    &-text > .container {
+      padding: 0;
     }
   }
 }

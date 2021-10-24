@@ -67,3 +67,35 @@ input:-webkit-autofill:active {
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: $containerHeaderMedia) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    &__header {
+      padding: 0;
+    }
+  }
+}
+@media screen and (max-width: $laptopWidthMedia) {
+  .eko {
+    &__title {
+      font-size: 1.813rem;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWidthMedia) {
+  html {
+    font-size: 12px;
+  }
+  .eko {
+    &__title, &__subtitle {
+      text-align: left;
+    }
+    &__title {
+      font-size: 29px;
+    }
+  }
+}

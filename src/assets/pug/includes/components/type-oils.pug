@@ -6,7 +6,11 @@ section.eko__section.type-oils
         ul.type-oils-list
           li.type-oils-list-item
             .type-oils-list-item__img
-              img(src="./assets/img/oils/1.png", alt="")
+              picture
+                source(srcset="./assets/img/oils/1.png" media="(min-width: 1201px)")
+                source(srcset="./assets/img/oils/1_mobile.png" media="(max-width: 575px)")
+                source(srcset="./assets/img/oils/1_laptop.png" media="(max-width: 1200px)")
+                img(srcset="./assets/img/oils/1.png", alt="")
             .type-oils-list-item-text
               .type-oils-list-item-text__title <span>Подсолнечное</span> масло
                 .type-oils-list-item-text__title-logo
@@ -19,7 +23,11 @@ section.eko__section.type-oils
                 a(href="#").eko__btn.eko__btn--long.type-oils-list-item-text__btn Я хочу это масло
           li.type-oils-list-item
             .type-oils-list-item__img
-              img(src="./assets/img/oils/2.png", alt="")
+              picture
+                source(srcset="./assets/img/oils/2.png" media="(min-width: 1201px)")
+                source(srcset="./assets/img/oils/2_mobile.png" media="(max-width: 575px)")
+                source(srcset="./assets/img/oils/2_laptop.png" media="(max-width: 1200px)")
+                img(srcset="./assets/img/oils/2.png", alt="")
             .type-oils-list-item-text
               .type-oils-list-item-text__title <span>Соевое</span> масло
                 .type-oils-list-item-text__title-logo
@@ -32,7 +40,11 @@ section.eko__section.type-oils
                 a(href="#").eko__btn.eko__btn--long.type-oils-list-item-text__btn Я хочу это масло
           li.type-oils-list-item
             .type-oils-list-item__img
-              img(src="./assets/img/oils/3.png", alt="")
+              picture
+                source(srcset="./assets/img/oils/3.png" media="(min-width: 1201px)")
+                source(srcset="./assets/img/oils/3_mobile.png" media="(max-width: 575px)")
+                source(srcset="./assets/img/oils/3_laptop.png" media="(max-width: 1200px)")
+                img(srcset="./assets/img/oils/3.png", alt="")
             .type-oils-list-item-text
               .type-oils-list-item-text__title <span>Кукурузное</span> масло
                 .type-oils-list-item-text__title-logo

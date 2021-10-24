@@ -63,3 +63,110 @@ comparisonSliders.each((idx, item) => {
     adaptiveHeight: true
   });
 });
+
+// Кнопка в футере
+const btnTop = $('.eko-btn-top');
+const btnTopIcon = btnTop.find('.eko-btn-top__wrap');
+const btnTopText = btnTop.find('.eko-btn-top__text');
+
+btnTopText.on('mouseenter', function() {
+  btnTopIcon.addClass('active');
+});
+btnTopText.on('mouseleave', function() {
+  btnTopIcon.removeClass('active');
+});
+btnTopText.on('click', function() {
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+});
+btnTopIcon.on('click', function() {
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+});
+
+// Читать дальше
+const readMore = $('.presentation-item__read-more');
+const readMoreText = readMore.parent().find('.presentation-item-text');
+const readedClass = 'readed';
+const activeClass = 'text-slice';
+
+window.onload = initSpliceText
+
+$(window).resize(initSpliceText);
+initSpliceText();
+readMore.on('click', expandText);
+
+function initSpliceText() {
+  readMoreText.each(function() {
+    const $this = $(this);
+    const $thisBtnReadMore = $this.parent().find('.presentation-item__read-more');
+    const textBlocks = $this.children();
+    const firstTextBlock = textBlocks.first();
+    const firstTextBlockHeight = firstTextBlock.outerHeight();
+    if (window.innerWidth < 575) {
+      if (!firstTextBlock.hasClass(activeClass) && textBlocks.length > 1) {
+        $this.css('height', firstTextBlockHeight);
+        spliceText(firstTextBlock, activeClass);
+      }
+
+      if (textBlocks.length < 2 && $thisBtnReadMore.length) {
+        $thisBtnReadMore.remove();
+      }
+    } else {
+      $this.css('height', 'auto');
+      if (firstTextBlock.hasClass(activeClass)) {
+        readMore.removeClass(readedClass);
+        returnText(firstTextBlock, activeClass);
+      }
+    }
+  });
+}
+
+/**
+ * 
+ * @param {HTMLElement} firstTextBlock 
+ * @param {string} activeClass
+ * @description Обрезает текст по первому элементу, заменяет на 3 ..., добавляет класс, что текст обрезан на первый элемент
+ */
+function spliceText(firstTextBlock, activeClass) {
+  const htmlText = firstTextBlock.html();
+  const replaceText = htmlText.substring(0, htmlText.length - 1) + '...';
+
+  firstTextBlock.attr('data-text', htmlText);
+  firstTextBlock.html(replaceText);
+  firstTextBlock.addClass(activeClass);
+}
+
+/**
+ * 
+ * @param {HTMLElement} firstTextBlock 
+ * @param {string} activeClass
+ * @description Возвращает оригинальный текст, убирает класс у первого элемента
+ */
+function returnText(firstTextBlock, activeClass) {
+  const htmlText = firstTextBlock.data('text');
+
+  firstTextBlock.html(htmlText);
+  firstTextBlock.removeClass(activeClass);
+}
+
+/**
+ * 
+ * @description По клику раскрывает текст, добавляет класс на прочитанный текст
+ */
+function expandText() {
+  const $this = $(this);
+  const textBlock = $this.parent().find('.presentation-item-text');
+  const curHeight = textBlock.outerHeight();
+  const firstTextBlock = textBlock.children().first();
+  const dataText = firstTextBlock.data('text');
+  firstTextBlock.html(dataText);
+  // console.log(firstTextBlock)
+
+  textBlock.css('height', 'auto');
+  const autoHeight = textBlock.outerHeight();
+
+  textBlock.css('height', curHeight);
+  textBlock.animate({height: autoHeight}, 1000, function() {
+    $this.addClass(readedClass);
+    textBlock.css('height', 'auto');
+  });
+}

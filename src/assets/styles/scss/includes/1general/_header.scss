@@ -6,15 +6,19 @@
     align-items: center;
     position: relative;
   }
+  &__logo {
+    min-width: 160px;
+  }
   &-menu {
+    min-width: 550px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     &__link {
-      margin-right: 52px;
+      margin-right: 3.25rem;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 0.875rem;
       color: #5E5E5E;
       text-transform: uppercase;
       &:last-child {
@@ -24,19 +28,30 @@
   }
   &__phone {
     background: #A2B084;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color .5s ease;
     &:before {
       content: '';
       display: block;
       width: 17px;
       height: 17px;
       background: url('phone.svg') center center/cover no-repeat;
+    }
+    &:hover {
+      background-color: #8B9A6C;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    &-menu {
+      margin: 0 10px;
+      position: static;
+      transform: translate(0, 0);
     }
   }
 }

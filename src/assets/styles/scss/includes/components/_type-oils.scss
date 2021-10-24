@@ -70,4 +70,87 @@
       }
     }
   }
+  @media screen and (max-width: $desktopWidthMedia) {
+    padding: 4.438rem 0 2rem 0;
+    &__title {
+      margin-bottom: 3.375rem;
+    }
+    &-list {
+      &-item {
+        margin-bottom: 1.375rem;
+      }
+    }
+  }
+  @media screen and (max-width: 834px) {
+    &-list {
+      &-item {
+        flex-wrap: wrap;
+        justify-content: center;
+        &-text {
+          text-align: center;
+          &-footer {
+            justify-content: center;
+          }
+        }
+        &__img {
+          width: 100%;
+          img {
+            margin: 0 auto;
+          }
+        }
+        &:nth-child(2n) &__img {
+          order: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    &__title {
+      text-align: center;
+    }
+    &-list {
+      &-item {
+        &-text {
+          &__title {
+            font-size: 27px;
+            &-logo {
+              max-width: 100px;
+            }
+          }
+          &-footer {
+            flex-wrap: wrap;
+          }
+          &__price {
+            width: 100%;
+            margin-bottom: 26px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 414px) {
+    .container {
+      padding: 0 6px;
+    }
+    &-list {
+      &-item {
+        &-text {
+          text-align: left;
+          &__title {
+            &-logo {
+              margin-left: 10px;
+            }
+          }
+          &__desc {
+            br {
+              display: none;
+            }
+          }
+          &-footer {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
 }

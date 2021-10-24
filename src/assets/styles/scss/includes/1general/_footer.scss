@@ -1,0 +1,111 @@
+.footer {
+  padding: 2.688rem 0 8.625rem 0;
+  background: #F8F8F8;
+  &__content {
+    position: relative;
+  }
+  &__row {
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10.438rem;
+  }
+  &__col {
+    margin-right: 20px;
+  }
+  &__logo {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0.813rem;
+  }
+  &__copyright {
+    font-size: 0.813rem;
+    line-height: 134.8%;
+    color: $baseColorText;
+  }
+  &__title {
+    font-size: 17px;
+    line-height: 134.8%;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #A2B084;
+  }
+  &-menu {
+    &__list {
+      list-style-type: none;
+    }
+    &__link {
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 100%;
+      color: $baseColorText;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+    }
+  }
+  &-contacts {
+    &__item {
+      font-size: 0.875rem;
+      line-height: 120%;
+      color: $baseColorText;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+    }
+    &__link {
+      margin-left: 5px;
+      color: $baseColorText;
+      text-decoration: none;
+    }
+  }
+  &__btn-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  @media screen and (max-width: 900px) {
+    &__btn-top {
+      top: auto;
+      bottom: -40px;
+    }
+    &__row {
+      padding-right: 0.438rem;
+      flex-wrap: wrap;
+    }
+    &__col {
+      margin-top: 40px;
+    }
+  }
+  @media screen and (max-width: $laptopWidthMedia) {
+    &__col {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+    &__btn-top {
+      position: static;
+      margin: 30px auto 0 auto;
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    padding: 0.688rem 0 5.625rem 0;
+    &__copyright {
+      font-size: 13px;
+    }
+    &__title {
+      font-size: 17px;
+    }
+    &-menu {
+      &__link {
+        font-size: 14px;
+      }
+    }
+    &-contacts {
+      &__item,
+      &__link {
+        font-size: 14px;
+      }
+    }
+  }
+}

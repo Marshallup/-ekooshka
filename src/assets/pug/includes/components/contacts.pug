@@ -1,0 +1,34 @@
+section.eko__section.contacts
+  .contacts__images
+    .contacts__img.contacts__img--left
+      picture
+        source(srcset="./assets/img/contacts/brains_mobile.png" media="(max-width: 575px)")
+        img(srcset="./assets/img/contacts/brains.png", alt="brains")
+    .contacts__img.contacts__img--right
+      img(src="./assets/img/contacts/oils.jpg", alt="oils")
+  .container
+    .contacts__content
+      h2.eko__title.contacts__title Наши контакты
+      .contacts__row
+        .contacts__col
+          .contacts-item
+            .contacts-item__title Адрес
+            .contacts-item__desc
+              .contacts-item__text Ставропольский край, <br> Минераловодский район, <br> пос. Загорский, ул. Солнечная 26.
+          .contacts-item
+            .contacts-item__title Почта
+            .contacts-item__desc
+              .contacts-item__text 
+                a.contacts-item__link(href="mailto:ab@promikz.ru") ab@promikz.ru
+        .contacts__col
+          .contacts-item
+            .contacts-item__title Телефон
+            .contacts-item__desc
+              .contacts-item__text
+                a.contacts-item__link(href="tel:+7-962-453-99-92") +7-962-453-99-92
+                a.contacts-item__link(href="tel:(87922) 78-998") (87922) 78-998
+          .contacts-item
+            .contacts-item__title График работы 
+            .contacts-item__desc
+              .contacts-item__text Пн-Пт  9:00-18:00
+

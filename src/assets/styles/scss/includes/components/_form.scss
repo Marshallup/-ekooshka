@@ -1,6 +1,6 @@
 .section-form {
   background: #F9F9F9;
-  padding: 7.625rem 0 12.5rem 0;
+  padding: 7.625rem 0 16.5rem 0;
   &__title {
     margin-bottom: 1rem;
   }
@@ -27,6 +27,7 @@
       outline: none;
       color: rgba(162,176,132, .7);
       &-wrap {
+        display: block;
         margin-right: 12px;
         position: relative;
       }
@@ -88,6 +89,70 @@
     &__checkbox:checked + &__label-item {
       &:before {
         opacity: 1;
+      }
+    }
+  }
+  @media screen and (max-width: $desktopWidthMedia) {
+    padding: 4.625rem 0 5.5rem 0;
+    &__desc {
+      margin: 0 0 2.75rem 0;
+    }
+    &__title {
+      font-size: 45px;
+    }
+    &-item {
+      &-elements {
+        flex-wrap: wrap;
+        max-width: 477px;
+        margin: 0 auto
+      }
+      &__wrapper {
+        margin: 0 0 30px 0;
+        flex-basis: 50%;
+      }
+      &__input {
+        margin-left: 0;
+        width: 217px;
+        display: block;
+        margin: 0 auto;
+        &-label {
+          left: 24px;
+        }
+      }
+      &__submit {
+        margin: 0 auto;
+        width: 217px;
+        height: 54px;
+        margin-left: 0;
+        &:after {
+          margin-left: 47px;
+        }
+      }
+      &__text {
+        margin: 0 0 1.313rem 0;
+      }
+    }
+  }
+  @media screen and (max-width: $mobileWidthMedia) {
+    &__title {
+      font-size: 27px;
+      text-align: center;
+    }
+    &-item {
+      &__wrapper {
+        flex-basis: 100%;
+      }
+      &__input {
+        &-wrap {
+          width: 217px;
+          margin: 0 auto;
+          // display: flex;
+        }
+      }
+      &__submit {
+        margin: 0 auto;
+        font-size: 16px;
+        padding-left: 45px;
       }
     }
   }
