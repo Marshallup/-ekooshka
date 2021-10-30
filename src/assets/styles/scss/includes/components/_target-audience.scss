@@ -20,7 +20,16 @@
     display: flex;
     justify-content: flex-end;
     &__item {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      &--top {
+        width: 426px;
+        height: 473px;
+      }
       &--bottom {
+        width: 426px;
+        height: 430px;
         position: absolute;
         bottom: -30%;
         left: 0;
@@ -78,6 +87,7 @@
     &-images {
       &__item {
         max-width: 320px;
+        height: 364px;
         &--bottom {
           bottom: 0;
         }

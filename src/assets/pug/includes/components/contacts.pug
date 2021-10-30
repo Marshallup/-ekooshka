@@ -1,11 +1,11 @@
 section.eko__section.contacts#contacts
   .contacts__images
-    .contacts__img.contacts__img--left
-      picture
-        source(srcset="./assets/img/contacts/brains_mobile.png" media="(max-width: 575px)")
-        img(srcset="./assets/img/contacts/brains.png", alt="brains")
-    .contacts__img.contacts__img--right
-      img(src="./assets/img/contacts/oils.png", alt="oils")
+    .contacts__img.contacts__img--left(style="background-image: url('./assets/img/contacts/brains.png')")
+      //- picture
+      //-   source(srcset="./assets/img/contacts/brains_mobile.png" media="(max-width: 575px)")
+      //-   img(srcset="./assets/img/contacts/brains.png", alt="brains")
+    .contacts__img.contacts__img--right(style="background-image: url('./assets/img/contacts/oils.png')")
+      //- img(src="./assets/img/contacts/oils.png", alt="oils")
   .container
     .contacts__content
       h2.eko__title.contacts__title Наши контакты
