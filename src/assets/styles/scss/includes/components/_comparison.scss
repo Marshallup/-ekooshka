@@ -1,7 +1,7 @@
 .comparison {
   padding: 8.125rem 0 6.688rem 0;
   max-width: 1520px;
-  margin: -100px auto 0 auto;
+  margin: 0 auto;
   background: #A2B084;
   &__content {
     max-width: 1330px;
@@ -38,8 +38,8 @@
       }
       &__desc {
         font-weight: 300;
-        font-size: 1.125rem;
-        line-height: 122%;
+        font-size: 1rem;
+        line-height: 135%;
         text-align: center;
         color: #FFFFFF;
       }
@@ -114,7 +114,6 @@
     color: #FFFFFF;
   }
   @media screen and (max-width: $desktopWidthMedia) {
-    margin-top: 0;
     overflow: hidden;
     &__content {
       justify-content: center;

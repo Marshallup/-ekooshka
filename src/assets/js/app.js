@@ -1,3 +1,4 @@
+const htmlBody = $("html, body");
 const mainSlider = $('#main-slider');
 
 mainSlider.on('init', function(event, slick) {
@@ -76,10 +77,10 @@ btnTopText.on('mouseleave', function() {
   btnTopIcon.removeClass('active');
 });
 btnTopText.on('click', function() {
-  $("html, body").animate({ scrollTop: 0 }, 1000);
+  htmlBody.animate({ scrollTop: 0 }, 1000);
 });
 btnTopIcon.on('click', function() {
-  $("html, body").animate({ scrollTop: 0 }, 1000);
+  htmlBody.animate({ scrollTop: 0 }, 1000);
 });
 
 // Читать дальше
@@ -159,7 +160,6 @@ function expandText() {
   const firstTextBlock = textBlock.children().first();
   const dataText = firstTextBlock.data('text');
   firstTextBlock.html(dataText);
-  // console.log(firstTextBlock)
 
   textBlock.css('height', 'auto');
   const autoHeight = textBlock.outerHeight();
@@ -169,4 +169,49 @@ function expandText() {
     $this.addClass(readedClass);
     textBlock.css('height', 'auto');
   });
+}
+
+const headerLinks = $('.header-menu__link');
+const footerLinks = $('.footer-menu__link');
+const burger = $('.banner-top__burger');
+const mobileMenu = $('.header-menu--mobile-wrapper');
+const mobileLinks = mobileMenu.find('.header-menu__link');
+
+burger.click(function() {
+  toggleMenu($(this));
+});
+mobileLinks.click(function() {
+  toggleMenu(burger);
+});
+
+function toggleMenu($burger) {
+  $burger.toggleClass('active');
+
+  if ($burger.hasClass('active')) {
+    htmlBody.animate({ scrollTop: 0 }, 200, function() {
+      htmlBody.addClass('lock');
+      mobileMenu.addClass('show');
+    });
+  } else {
+    htmlBody.removeClass('lock');
+    mobileMenu.removeClass('show');
+  }
+}
+
+headerLinks.click(function(e) {
+  e.preventDefault();
+  animateAnchorLink($(this));
+});
+footerLinks.click(function(e) {
+  e.preventDefault();
+  animateAnchorLink($(this));
+});
+
+
+function animateAnchorLink($link) {
+  const searchId = $link.attr('href');
+  if (searchId) {
+    const $searchEl = $(searchId);
+    htmlBody.animate({ scrollTop: $searchEl.position().top }, 1000)
+  }
 }

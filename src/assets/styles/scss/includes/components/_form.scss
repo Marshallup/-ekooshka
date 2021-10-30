@@ -1,5 +1,6 @@
 .section-form {
   background: #F9F9F9;
+  margin-bottom: -100px;
   padding: 7.625rem 0 16.5rem 0;
   &__title {
     margin-bottom: 1rem;
@@ -94,6 +95,7 @@
   }
   @media screen and (max-width: $desktopWidthMedia) {
     padding: 4.625rem 0 5.5rem 0;
+    margin-bottom: 0;
     &__desc {
       margin: 0 0 2.75rem 0;
     }

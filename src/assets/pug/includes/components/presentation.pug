@@ -1,4 +1,4 @@
-section.eko__section.presentation
+section.eko__section.presentation#production
   .presentation__body
     .container
       h2.eko__title.presentation__title Познакомьтесь с нашим <br> свежим маслом первого отжима
@@ -8,7 +8,10 @@ section.eko__section.presentation
         .presentation__content
           .presentation-item
             .presentation-item__elem.presentation-item__img
-              img(src="./assets/img/presentation/1.png", alt="")
+              picture
+                source(srcset="./assets/img/presentation/1.png" media="(min-width: 1201px)")
+                source(srcset="./assets/img/presentation/1_sm-desktop.png" media="(max-width: 1200px)")
+                img(src="./assets/img/presentation/1_sm-desktop.pn.png", alt="")
             .presentation-item__elem.presentation-item__desc
               .container
                 p.presentation-item__title 100% <span>натуральный</span> продукт
@@ -18,7 +21,10 @@ section.eko__section.presentation
                 .presentation-item__read-more Читать полностью
           .presentation-item.presentation-item--two
             .presentation-item__elem.presentation-item__img
-              img(src="./assets/img/presentation/2.png", alt="")
+              picture
+                source(srcset="./assets/img/presentation/2.png" media="(min-width: 1201px)")
+                source(srcset="./assets/img/presentation/2_sm-desktop.png" media="(max-width: 1200px)")
+                img(src="./assets/img/presentation/2_sm-desktop.pn.png", alt="")
             .presentation-item__elem.presentation-item__desc
               .container
                 p.presentation-item__title Сохраняем все <br> <span>витамины и минералы</span>
@@ -28,7 +34,10 @@ section.eko__section.presentation
                 .presentation-item__read-more Читать полностью
           .presentation-item.presentation-item--three
             .presentation-item__elem.presentation-item__img
-              img(src="./assets/img/presentation/3.png", alt="")
+              picture
+                source(srcset="./assets/img/presentation/3.jpg" media="(min-width: 1201px)")
+                source(srcset="./assets/img/presentation/3_sm-desktop.png" media="(max-width: 1200px)")
+                img(src="./assets/img/presentation/3_sm-desktop.png", alt="")
             .presentation-item__elem.presentation-item__desc
               .container
                 p.presentation-item__title Строгий контроль <br> <span>качества</span> входящего сырья

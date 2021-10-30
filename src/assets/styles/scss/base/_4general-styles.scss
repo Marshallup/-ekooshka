@@ -68,6 +68,11 @@ input:-webkit-autofill:active {
   }
 }
 
+.lock {
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (max-width: $containerHeaderMedia) {
   html {
     font-size: 15px;
@@ -81,7 +86,7 @@ input:-webkit-autofill:active {
 @media screen and (max-width: $laptopWidthMedia) {
   .eko {
     &__title {
-      font-size: 1.813rem;
+      font-size: 2.813rem;
     }
   }
 }

@@ -1,5 +1,5 @@
 .target-audience {
-  padding-top: 0;
+  padding: 0 0 200px 0;
   &__inner {
     padding: 0 53px;
   }
@@ -98,6 +98,7 @@
     }
   }
   @media screen and (max-width: $desktopWidthMedia) {
+    padding-bottom: 50px;
     &__title {
       font-size: 2.438rem;
       margin-bottom: 3.25rem;

@@ -30,6 +30,13 @@
     text-transform: uppercase;
     color: #A2B084;
   }
+  &__link {
+    color: $baseColorText;
+    transition: color .3s ease;
+    &:hover {
+      color: $greenColor;
+    }
+  }
   &-menu {
     &__list {
       list-style-type: none;
@@ -41,12 +48,16 @@
       color: $baseColorText;
       text-decoration: none;
       margin-bottom: 0.75rem;
+      transition: color .3s ease;
+      &:hover {
+        color: $greenColor;
+      }
     }
   }
   &-contacts {
     &__item {
       font-size: 0.875rem;
-      line-height: 120%;
+      line-height: 130%;
       color: $baseColorText;
       text-decoration: none;
       margin-bottom: 0.75rem;
@@ -55,6 +66,10 @@
       margin-left: 5px;
       color: $baseColorText;
       text-decoration: none;
+      transition: color .3s ease;
+      &:hover {
+        color: $greenColor;
+      }
     }
   }
   &__btn-top {
