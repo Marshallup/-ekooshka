@@ -1,4 +1,4 @@
-section.eko__section.target-audience#who
+section.eko__section.target-audience#who(data-aos="show-anim" data-aos-duration="1500")
   .container
     .target-audience__inner
       .target-audience__body
@@ -23,7 +23,8 @@ section.eko__section.target-audience#who
                     li.target-audience-list__item 
                       .target-audience-list__item-text Для людей, борющихся <br> с <span>лишним весом</span>
                 .target-audience__logo
-                  img(src="./assets/img/target-audience/logo.svg", alt="logo")
+                  svg
+                    use(xlink:href="./assets/img/logo-base.svg#logo-svg")
             .target-audience-images
               .target-audience-images__inner
                 .target-audience-images__item.target-audience-images__item--top(style="background-image: url('./assets/img/target-audience/1.jpg')")

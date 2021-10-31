@@ -17,6 +17,11 @@
     display: block;
     text-decoration: none;
     margin-bottom: 0.813rem;
+    svg {
+      height: 48px;
+      max-width: 139px;
+      fill: #A2B084;
+    }
   }
   &__copyright {
     font-size: 0.813rem;
@@ -114,6 +119,7 @@
     &-menu {
       &__link {
         font-size: 14px;
+        margin-bottom: 1rem;
       }
     }
     &-contacts {

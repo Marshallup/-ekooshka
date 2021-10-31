@@ -40,6 +40,14 @@
       position: relative;
     }
   }
+  &__logo {
+    svg {
+      fill: white;
+      opacity: 0.6;
+      max-width: 194px;
+      height: 55px;
+    }
+  }
   &__title {
     margin-top: 6.25rem;
     font-family: 'Cormorant';

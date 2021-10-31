@@ -1,4 +1,4 @@
-section.eko__section.comparison#vs
+section.eko__section.comparison#vs(data-aos="show-anim" data-aos-duration="1500")
   .container
     .comparison__content
       - var countSliders = ['','','','','',''];
@@ -21,7 +21,8 @@ section.eko__section.comparison#vs
             .comparison-slider-item
               .comparison-slider-item__title Натуральное масло
                 .comparison-slider-item__title-logo
-                  img(src="./assets/img/vs/logo.svg", alt="logo")
+                  svg
+                    use(xlink:href="./assets/img/logo-base.svg#logo-svg")
               p.comparison-slider-item__desc  Отсутствие консервантов и других <br> вредных веществ. Только 100% <br> натуральное органическое сырье, <br> собранное в регионе Кавказских <br> Минеральных Вод.
         .comparison-slider-controlls
           .comparison-slider-controlls-arrows

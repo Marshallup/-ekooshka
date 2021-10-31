@@ -1,5 +1,6 @@
 .type-oils {
   padding: 3.438rem 0 13rem 0;
+  overflow: hidden;
   &__title {
     margin-bottom: 9.375rem;
   }
@@ -37,6 +38,13 @@
             display: inline-block;
             margin-left: 30px;
             vertical-align: middle;
+            max-width: 194px;
+            svg {
+              max-width: 100%;
+              max-height: 55px;
+              fill: #5E5E5E;
+              opacity: 0.3;
+            }
           }
           span {
             font-family: 'Cormorant-italic';
@@ -111,6 +119,17 @@
       }
     }
   }
+  @media screen and (max-width: $laptopWidthMedia) {
+    &-list {
+      &-item {
+        &-text {
+          &__title-logo {
+            max-width: 140px;
+          }
+        }
+      }
+    }
+  }
   @media screen and (max-width: $mobileWidthMedia) {
     &__title {
       text-align: center;
@@ -123,7 +142,7 @@
           &__title {
             font-size: 27px;
             &-logo {
-              max-width: 100px;
+              display: none;
             }
           }
           &-footer {

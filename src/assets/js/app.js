@@ -1,6 +1,9 @@
 const htmlBody = $("html, body");
 const mainSlider = $('#main-slider');
 
+// AOS инициализация
+AOS.init();
+
 mainSlider.on('init', function(event, slick) {
   const slideCount = slick.slideCount;
   $('#count-end').text('0' + slideCount);
@@ -10,10 +13,12 @@ mainSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
   $('#count-start').text('0' + nextSlideInc);
 });
 mainSlider.slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
   fade: true,
   dots: true,
   infinite: true,
-  speed: 600,
+  speed: 800,
   appendArrows: '.main-slider__arrows',
   appendDots: '.main-slider__dots',
   slidesToShow: 1,
@@ -171,8 +176,7 @@ function expandText() {
   });
 }
 
-const headerLinks = $('.header-menu__link');
-const footerLinks = $('.footer-menu__link');
+// Бургер
 const burger = $('.banner-top__burger');
 const mobileMenu = $('.header-menu--mobile-wrapper');
 const mobileLinks = mobileMenu.find('.header-menu__link');
@@ -198,11 +202,9 @@ function toggleMenu($burger) {
   }
 }
 
-headerLinks.click(function(e) {
-  e.preventDefault();
-  animateAnchorLink($(this));
-});
-footerLinks.click(function(e) {
+// Кнопки якоря
+const anchorLinks = $('.eko__anchor');
+anchorLinks.click(function(e) {
   e.preventDefault();
   animateAnchorLink($(this));
 });

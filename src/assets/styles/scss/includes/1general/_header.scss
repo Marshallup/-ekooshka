@@ -8,6 +8,11 @@
   }
   &__logo {
     min-width: 160px;
+    svg {
+      max-width: 132px;
+      height: 48px;
+      fill: #A2B084;
+    }
   }
   &-menu {
     min-width: 550px;
@@ -75,9 +80,7 @@
         &__logo svg {
           width: 130px;
           height: 50px;
-          path {
-            fill: white;
-          }
+          fill: white;
         }
         &__list {
           margin-bottom: 2.813rem;
