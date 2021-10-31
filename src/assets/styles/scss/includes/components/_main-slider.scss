@@ -2,6 +2,26 @@
   &__container {
     max-width: 90%;
     margin: 0 auto;
+    h2 {
+      font-family: 'Cormorant';
+      font-weight: 300;
+      font-size: 4.5rem;
+      line-height: 96.8%;
+      color: #5E5E5E;
+      margin-top: 0;
+      margin-bottom: 20px;
+      span {
+        font-family: 'Cormorant-italic';
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 142.8%;
+      letter-spacing: 0.03em;
+      color: #5E5E5E;
+      margin-bottom: 32px;
+    }
   }
   &__inner {
     position: relative;
@@ -87,33 +107,14 @@
       margin: 0 3px;
     }
   }
-  &__title {
-    font-family: 'Cormorant';
-    font-weight: 300;
-    font-size: 4.5rem;
-    line-height: 96.8%;
-    color: #5E5E5E;
-    margin-top: 0;
-    margin-bottom: 20px;
-    span {
-      font-family: 'Cormorant-italic';
-      color: #A2B084;
-    }
-  }
-  &__text {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 142.8%;
-    letter-spacing: 0.03em;
-    color: #5E5E5E;
-    margin-bottom: 32px;
-  }
   @media screen and (max-width: $desktopWidthMedia) {
     &__item {
       min-height: 605px;
     }
-    &__title {
-      font-size: 3.5rem;
+    &__container {
+      h2 {
+        font-size: 3.5rem;
+      }
     }
   }
   @media screen and (max-width: $containerHeaderMedia) {
@@ -121,22 +122,26 @@
       padding-top: 72px;
       min-height: 435px;
     }
-    &__title {
-      font-size: 50px;
+    &__container {
+      h2 {
+        font-size: 50px;
+      }
     }
   }
   @media screen and (max-width: 800px) {
-    &__title {
-      font-size: 42px;
-      max-width: 487px;
-      br {
-        display: none;
+    &__container {
+      h2 {
+        font-size: 42px;
+        max-width: 487px;
+        br {
+          display: none;
+        }
       }
-    }
-    &__text {
-      max-width: 415px;
-      br {
-        display: none;
+      p {
+        max-width: 415px;
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -164,28 +169,32 @@
         z-index: -1;
       }
     }
-    &__title, &__title span, &__text {
-      color: white;
-      font-weight: 300;
-    }
-    &__title {
-      max-width: 400px;
-      font-size: 32px;
-    }
-    &__text {
-      font-size: 15px;
-      line-height: 20px;
+    &__container {
+      h2, h2 span, p {
+        color: white;
+        font-weight: 300;
+      }
+      h2 {
+        max-width: 400px;
+        font-size: 32px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
     &-controlls {
       display: none;
     }
   }
   @media screen and (max-width: 400px) {
-    &__title {
-      max-width: none;
-    }
-    &__text {
-      max-width: 95%;
+    &__container {
+      h2 {
+        max-width: none;
+      }
+      p {
+        max-width: 95%;
+      }
     }
   }
 }

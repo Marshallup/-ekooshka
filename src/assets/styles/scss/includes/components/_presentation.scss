@@ -16,20 +16,23 @@
       min-width: 400px;
       margin-right: 6.25rem;
     }
-    &__title {
-      font-family: 'Cormorant';
-      margin: 1.25rem 0 1.25rem 0;
-      font-weight: 500;
-      font-size: 2.938rem;
-      line-height: 98%;
-      color: $baseColorText;
-      span {
-        font-family: 'Cormorant-italic';
-        color: #E6AC4D;
+    &__desc {
+      .container > h2 {
+        font-family: 'Cormorant';
+        margin: 1.25rem 0 1.25rem 0;
+        font-weight: 500;
+        font-size: 2.938rem;
+        line-height: 98%;
+        color: $baseColorText;
+        span {
+          font-family: 'Cormorant-italic';
+          color: #E6AC4D;
+        }
       }
+
     }
     &-text {
-      &__block {
+      p {
         font-weight: 300;
         font-size: 1.25rem;
         line-height: 140%;
@@ -61,14 +64,17 @@
   }
   @media screen and (max-width: $desktopWidthMedia) {
     &-item {
-      &__title {
-        font-size: 2.238rem;
+      &__desc {
+        .container > h2 {
+          font-size: 2.238rem;
+        }
+
       }
       &__img {
         margin-right: 3.25rem;
       }
       &-text {
-        &__block {
+        p {
           font-size: 1rem;
           br {
             display: none;
@@ -91,7 +97,7 @@
         text-align: center;
       }
       &-text {
-        &__block {
+        p {
           br {
             display: block;
           }
@@ -124,13 +130,13 @@
     &-item {
       &__desc {
         text-align: left;
-      }
-      &__title {
-        font-size: 27px;
+        .container > h2 {
+          font-size: 27px;
+        }
       }
       &-text {
         overflow: hidden;
-        &__block {
+        p {
           font-size: 15px;
           &:first-child {
             margin-top: 0;
