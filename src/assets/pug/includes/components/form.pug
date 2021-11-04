@@ -10,17 +10,18 @@ section.eko__section.section-form#order(data-aos="show-anim" data-aos-duration="
               .section-form-item__wrapper
                 label.section-form-item__input-wrap
                   .section-form-item__input-label Введите E-mail
-                  input(type="email").section-form-item__input
+                  input(type="text").section-form-item__input#email_order
               .section-form-item__wrapper
                 label.section-form-item__input-wrap
                   .section-form-item__input-label Введите имя
-                  input(type="text").section-form-item__input
+                  input(type="text").section-form-item__input#name_order
               .section-form-item__wrapper
                 label.section-form-item__input-wrap
                   .section-form-item__input-label Введите телефон
-                  input(type="phone").section-form-item__input
-              .section-form-item__wrapper
-                button(type="submit").eko__btn.section-form-item__submit Заказать
+                  input(type="text").section-form-item__input#phone_order
+              .section-form-item__wrapper.section-form-item__wrapper-submit
+                .section-form-item__inner
+                  button(type="submit").eko__btn.section-form-item__submit Заказать
             p.section-form-item__text Заказ от 1 ящика (12 бутылок). В ящике могут быть разные масла.
             label.section-form-item__label
               .section-form-item__label-inner

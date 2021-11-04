@@ -41,7 +41,7 @@
           }
         }
       }
-      &__desc {
+      p {
         font-weight: 300;
         font-size: 1rem;
         line-height: 135%;
@@ -139,7 +139,7 @@
             max-width: 126px;
           }
         }
-        &__desc {
+        p {
           font-size: 16px;
           line-height: 137%;
           font-weight: 300;
@@ -180,7 +180,7 @@
   @media screen and (max-width: 420px) {
     &-slider {
       &-item {
-        &__desc {
+        p {
           br {
             display: none;
           }

@@ -71,6 +71,12 @@ jQuery(document).ready(function($) {
   // AOS инициализация
   AOS.init();
 
+  // Inputs mask
+  Inputmask({ mask: '(+7 |8 )999 (999) 99 99', greedy: true, showMaskOnHover: false,}).mask('#phone_order');
+
+  const emailOrder = document.getElementById('email_order');
+  emailOrder.removeAttribute('type');
+  Inputmask({ mask: '*{1,20}@*{3,20}.a{2,3}', greedy: false, showMaskOnHover: false,}).mask(emailOrder);
 // Кнопка в футере
   const btnTop = $('.eko-btn-top');
   const btnTopIcon = btnTop.find('.eko-btn-top__wrap');

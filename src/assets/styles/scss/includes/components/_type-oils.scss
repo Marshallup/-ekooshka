@@ -147,6 +147,9 @@
           h2 {
             font-size: 27px;
           }
+          &__title {
+            justify-content: center;
+          }
           &__title-logo {
             display: none;
           }
@@ -183,6 +186,9 @@
       &-item {
         &-text {
           text-align: left;
+          &__title {
+            justify-content: flex-start;
+          }
           &__title-logo {
             margin-left: 10px;
           }
