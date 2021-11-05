@@ -9,7 +9,8 @@ header.header(data-aos="show-anim" data-aos-delay="500" data-aos-duration="1000"
             use(xlink:href="./assets/img/logo-base.svg#logo-svg")
         nav.header-menu.header-menu--desktop
           each item in items
-            a(href=item.link).header-menu__link.eko__anchor=item.text
+            li.header-menu__item
+              a(href=item.link).header-menu__link.eko__anchor=item.text
         a(href="tel:79020321454").header__phone
   .header-menu--mobile-wrapper
     .header-menu--mobile
