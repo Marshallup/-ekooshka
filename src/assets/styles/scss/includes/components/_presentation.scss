@@ -97,11 +97,8 @@
         text-align: center;
       }
       &-text {
-        p {
-          br {
-            display: block;
-          }
-        }
+        margin: 0 auto;
+        max-width: 580px;
       }
     }
   }

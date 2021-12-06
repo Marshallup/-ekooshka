@@ -46,6 +46,7 @@
       margin-bottom: 1rem;
     }
     &__input {
+      border-radius: 0;
       border: 1px solid #A2B084;
       padding-left: 15px;
       width: 274px;
@@ -92,7 +93,7 @@
       &-text {
         font-size: 0.938rem;
         line-height: 134.8%;
-        color: #5E5E5E;
+        color: rgba(0, 0, 0, 0.5);
       }
       &-item {
         //display: flex;

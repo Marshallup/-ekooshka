@@ -150,6 +150,11 @@
     .container {
       padding: 0;
     }
+    &__order {
+      &:after {
+        margin-left: 25px;
+      }
+    }
     &__item {
       padding: 38px 0 66px 0;
       min-height: 300px;
